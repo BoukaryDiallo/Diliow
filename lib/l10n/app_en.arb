@@ -1,0 +1,81 @@
+{
+  "@@locale": "en",
+  "appName": "Dilio",
+  "appTagline": "Stuck? Let Dilio decide.",
+
+  "home_subtitle": "What's the verdict?",
+  "home_mode_wheel": "Spin the wheel",
+  "home_mode_coin": "Flip a coin",
+  "home_mode_list": "Pick from a list",
+  "home_mode_yesno": "Yes or no",
+  "home_saved_lists": "Saved lists",
+  "home_history": "History",
+
+  "wheel_title": "Wheel",
+  "wheel_spin_cta": "Spin",
+  "wheel_edit_segments": "Edit segments",
+  "wheel_min_segments_error": "You need at least 2 segments",
+  "wheel_max_segments_error": "Maximum 12 segments",
+  "wheel_segment_add": "Add segment",
+  "wheel_default_segment": "Option {index}",
+  "@wheel_default_segment": {
+    "placeholders": { "index": { "type": "int" } }
+  },
+
+  "coin_title": "Coin",
+  "coin_heads": "Heads",
+  "coin_tails": "Tails",
+  "coin_flip_cta": "Flip",
+
+  "list_title": "Pick one",
+  "list_add_placeholder": "Add an option",
+  "list_pick_cta": "Pick one",
+  "list_empty_state": "Add at least 2 options",
+  "list_save_cta": "Save list",
+  "list_load_saved": "Load saved list",
+  "list_saved_toast": "List saved",
+
+  "yesno_title": "Yes or no",
+  "yesno_placeholder": "What's on your mind?",
+  "yesno_decide_cta": "Decide",
+  "yesno_answer_yes": "Yes",
+  "yesno_answer_no": "No",
+  "yesno_answer_maybe": "Maybe",
+
+  "saved_lists_title": "Saved lists",
+  "saved_lists_empty": "No saved lists yet",
+  "saved_list_delete_confirm": "Delete this list?",
+  "saved_list_deleted": "List deleted",
+  "saved_list_undo": "Undo",
+  "saved_list_name_placeholder": "List name",
+  "saved_list_option_count": "{count, plural, =1{1 option} other{{count} options}}",
+  "@saved_list_option_count": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "history_title": "History",
+  "history_empty": "No decisions yet",
+  "history_clear_all": "Clear all",
+  "history_clear_confirm": "Clear all decisions?",
+  "history_share": "Share",
+  "history_replay": "Replay",
+
+  "onboarding_welcome_title": "Stuck? Let Dilio decide.",
+  "onboarding_welcome_body": "Spin a wheel, flip a coin, pick from a list, or ask yes or no.",
+  "onboarding_how_title": "Four ways to decide",
+  "onboarding_how_body": "Wheel, coin, list picker, or yes/no — choose your method and let Dilio do the rest.",
+  "onboarding_cta_next": "Next",
+  "onboarding_cta_start": "Let's go",
+
+  "share_result_template": "Dilio chose: {result}",
+  "@share_result_template": {
+    "placeholders": { "result": { "type": "String" } }
+  },
+
+  "common_cancel": "Cancel",
+  "common_delete": "Delete",
+  "common_save": "Save",
+  "common_done": "Done",
+  "common_back": "Back",
+  "verdict_label": "The verdict is in"
+}

@@ -1,0 +1,81 @@
+{
+  "@@locale": "fr",
+  "appName": "Dilio",
+  "appTagline": "Bloqué ? Dilio tranche.",
+
+  "home_subtitle": "Quel est le verdict ?",
+  "home_mode_wheel": "Tourner la roue",
+  "home_mode_coin": "Lancer une pièce",
+  "home_mode_list": "Choisir dans une liste",
+  "home_mode_yesno": "Oui ou non",
+  "home_saved_lists": "Listes enregistrées",
+  "home_history": "Historique",
+
+  "wheel_title": "Roue",
+  "wheel_spin_cta": "Tourner",
+  "wheel_edit_segments": "Modifier les segments",
+  "wheel_min_segments_error": "Il faut au moins 2 segments",
+  "wheel_max_segments_error": "Maximum 12 segments",
+  "wheel_segment_add": "Ajouter un segment",
+  "wheel_default_segment": "Option {index}",
+  "@wheel_default_segment": {
+    "placeholders": { "index": { "type": "int" } }
+  },
+
+  "coin_title": "Pièce",
+  "coin_heads": "Pile",
+  "coin_tails": "Face",
+  "coin_flip_cta": "Lancer",
+
+  "list_title": "Choisir",
+  "list_add_placeholder": "Ajouter une option",
+  "list_pick_cta": "Choisir",
+  "list_empty_state": "Ajoute au moins 2 options",
+  "list_save_cta": "Enregistrer la liste",
+  "list_load_saved": "Charger une liste enregistrée",
+  "list_saved_toast": "Liste enregistrée",
+
+  "yesno_title": "Oui ou non",
+  "yesno_placeholder": "Quelle est la question ?",
+  "yesno_decide_cta": "Décider",
+  "yesno_answer_yes": "Oui",
+  "yesno_answer_no": "Non",
+  "yesno_answer_maybe": "Peut-être",
+
+  "saved_lists_title": "Listes enregistrées",
+  "saved_lists_empty": "Aucune liste enregistrée",
+  "saved_list_delete_confirm": "Supprimer cette liste ?",
+  "saved_list_deleted": "Liste supprimée",
+  "saved_list_undo": "Annuler",
+  "saved_list_name_placeholder": "Nom de la liste",
+  "saved_list_option_count": "{count, plural, =1{1 option} other{{count} options}}",
+  "@saved_list_option_count": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "history_title": "Historique",
+  "history_empty": "Aucune décision pour l'instant",
+  "history_clear_all": "Tout effacer",
+  "history_clear_confirm": "Effacer tout l'historique ?",
+  "history_share": "Partager",
+  "history_replay": "Rejouer",
+
+  "onboarding_welcome_title": "Bloqué ? Dilio tranche.",
+  "onboarding_welcome_body": "Tourne une roue, lance une pièce, choisis dans une liste ou pose une question oui/non.",
+  "onboarding_how_title": "Quatre façons de décider",
+  "onboarding_how_body": "Roue, pièce, liste ou oui/non — choisis ta méthode, Dilio s'occupe du reste.",
+  "onboarding_cta_next": "Suivant",
+  "onboarding_cta_start": "C'est parti",
+
+  "share_result_template": "Dilio a choisi : {result}",
+  "@share_result_template": {
+    "placeholders": { "result": { "type": "String" } }
+  },
+
+  "common_cancel": "Annuler",
+  "common_delete": "Supprimer",
+  "common_save": "Enregistrer",
+  "common_done": "Terminé",
+  "common_back": "Retour",
+  "verdict_label": "Verdict !"
+}
