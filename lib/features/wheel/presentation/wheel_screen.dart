@@ -66,16 +66,12 @@ class _WheelScreenState extends ConsumerState<WheelScreen>
     final sweep = 2 * math.pi / n;
     final winner = _random.nextInt(n);
 
-    // Random offset within the segment so it doesn't always stop dead center.
-    final offset = (_random.nextDouble() - 0.5) * sweep * 0.7;
-    // After modulo by 2π, we want the wheel rotation θ such that the winner segment
-    // center sits at the top. Segment i is centered at angle i*sweep (relative to
-    // pointer convention in the painter). So target = -i*sweep mod 2π.
-    final target = (-winner * sweep + offset) % (2 * math.pi);
-
-    // Add 4-5 full turns for drama, then land on target.
-    final turns = 4 + _random.nextDouble();
-    final end = _baseRotation + turns * 2 * math.pi + (target - (_baseRotation % (2 * math.pi)));
+    // Rotate so segment `winner`'s center lands exactly under the pointer.
+    final targetMod = (-winner * sweep) % (2 * math.pi);
+    final currentMod = _baseRotation % (2 * math.pi);
+    final delta = (targetMod - currentMod) % (2 * math.pi);
+    final turns = 4 + _random.nextInt(2);
+    final end = _baseRotation + turns * 2 * math.pi + delta;
 
     _spinTween = Tween<double>(begin: _baseRotation, end: end).animate(
       CurvedAnimation(parent: _spinCtrl, curve: Curves.decelerate),

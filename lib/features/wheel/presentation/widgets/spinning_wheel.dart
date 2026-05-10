@@ -25,6 +25,7 @@ class SpinningWheel extends StatelessWidget {
       aspectRatio: 1,
       child: Stack(
         alignment: Alignment.center,
+        clipBehavior: Clip.none,
         children: [
           Transform.rotate(
             angle: rotation,
@@ -37,12 +38,19 @@ class SpinningWheel extends StatelessWidget {
               ),
             ),
           ),
-          // Pointer at top
+          // Pointer sits ABOVE the wheel with its tip resting on the outer edge,
+          // so the indicator is visually unambiguous.
           Positioned(
-            top: 0,
-            child: CustomPaint(
-              size: const Size(28, 28),
-              painter: _PointerPainter(color: Theme.of(context).colorScheme.onSurface),
+            top: -22,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: CustomPaint(
+                size: const Size(26, 26),
+                painter: _PointerPainter(
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
             ),
           ),
           // Center hub
