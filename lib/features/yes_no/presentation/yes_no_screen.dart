@@ -22,6 +22,7 @@ class _YesNoScreenState extends ConsumerState<YesNoScreen> {
   final _ctrl = TextEditingController();
   bool _flashing = false;
   YesNoAnswer? _answer;
+  String? _question;
 
   @override
   void initState() {
@@ -44,6 +45,7 @@ class _YesNoScreenState extends ConsumerState<YesNoScreen> {
     haptics.medium();
     setState(() {
       _answer = null;
+      _question = q;
     });
 
     final answer = ref.read(yesNoProvider.notifier).decide();
@@ -106,6 +108,7 @@ class _YesNoScreenState extends ConsumerState<YesNoScreen> {
                           : _AnswerView(
                               key: ValueKey(_answer),
                               answer: _answer!,
+                              question: _question,
                               label: _answer!.label(
                                 l10n.yesno_answer_yes,
                                 l10n.yesno_answer_no,
@@ -153,28 +156,47 @@ class _YesNoScreenState extends ConsumerState<YesNoScreen> {
 }
 
 class _AnswerView extends StatelessWidget {
-  const _AnswerView({super.key, required this.answer, required this.label});
+  const _AnswerView({
+    super.key,
+    required this.answer,
+    required this.label,
+    this.question,
+  });
 
   final YesNoAnswer answer;
   final String label;
+  final String? question;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(answer.emoji, style: const TextStyle(fontSize: 96)),
-        const SizedBox(height: 8),
-        Text(
-          label,
-          style: context.textStyles.displayLarge?.copyWith(
-            fontSize: 64,
-            fontWeight: FontWeight.w800,
-            color: answer.color,
-            letterSpacing: -1,
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (question != null && question!.isNotEmpty) ...[
+            Text(
+              '"$question"',
+              textAlign: TextAlign.center,
+              style: context.textStyles.bodyMedium?.copyWith(
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
+          Text(answer.emoji, style: const TextStyle(fontSize: 96)),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: context.textStyles.displayLarge?.copyWith(
+              fontSize: 64,
+              fontWeight: FontWeight.w800,
+              color: answer.color,
+              letterSpacing: -1,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     )
         .animate()
         .fadeIn(duration: 350.ms)
