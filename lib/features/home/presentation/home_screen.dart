@@ -27,73 +27,142 @@ class HomeScreen extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(l10n.appName, style: context.textStyles.displayLarge),
-                      const SizedBox(height: 4),
-                      Text(l10n.home_subtitle, style: context.textStyles.bodyMedium),
-                    ],
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.history_rounded),
-                    tooltip: l10n.home_history,
-                    onPressed: () => goTo('/history'),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 24),
-              Expanded(
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  childAspectRatio: 1,
+              const SizedBox(height: 12),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(6, 12, 6, 22),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ModeCard(
-                      icon: Icons.pie_chart_rounded,
-                      label: l10n.home_mode_wheel,
-                      color: AppColors.wheelPalette[0],
-                      onTap: () => goTo('/wheel'),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.appName,
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: -0.5,
+                            color: context.colors.onSurface,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          l10n.home_subtitle,
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: context.colors.onSurface.withValues(alpha: 0.55),
+                          ),
+                        ),
+                      ],
                     ),
-                    ModeCard(
-                      icon: Icons.monetization_on_outlined,
-                      label: l10n.home_mode_coin,
-                      color: AppColors.wheelPalette[3],
-                      onTap: () => goTo('/coin'),
-                    ),
-                    ModeCard(
-                      icon: Icons.list_alt_rounded,
-                      label: l10n.home_mode_list,
-                      color: AppColors.wheelPalette[1],
-                      onTap: () => goTo('/list'),
-                    ),
-                    ModeCard(
-                      icon: Icons.help_outline_rounded,
-                      label: l10n.home_mode_yesno,
-                      color: AppColors.wheelPalette[7],
-                      onTap: () => goTo('/yesno'),
+                    IconButton(
+                      icon: const Icon(Icons.history_rounded),
+                      tooltip: l10n.home_history,
+                      onPressed: () => goTo('/history'),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 12),
-              OutlinedButton.icon(
-                onPressed: () => goTo('/saved'),
-                icon: const Icon(Icons.bookmark_border_rounded),
-                label: Text(l10n.home_saved_lists),
-                style: OutlinedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(52),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+              AspectRatio(
+                aspectRatio: 2.0,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: ModeCard(
+                        icon: Icons.rotate_right_rounded,
+                        label: l10n.home_mode_wheel,
+                        subtitle: l10n.home_mode_wheel_sub,
+                        color: AppColors.primary,
+                        filled: true,
+                        onTap: () => goTo('/wheel'),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: ModeCard(
+                        icon: Icons.circle_outlined,
+                        label: l10n.home_mode_coin,
+                        subtitle: l10n.home_mode_coin_sub,
+                        color: AppColors.accent,
+                        filled: false,
+                        onTap: () => goTo('/coin'),
+                      ),
+                    ),
+                  ],
                 ),
               ),
+              const SizedBox(height: 10),
+              AspectRatio(
+                aspectRatio: 2.0,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: ModeCard(
+                        icon: Icons.list_rounded,
+                        label: l10n.home_mode_list,
+                        subtitle: l10n.home_mode_list_sub,
+                        color: AppColors.primary,
+                        filled: false,
+                        onTap: () => goTo('/list'),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: ModeCard(
+                        icon: Icons.help_outline_rounded,
+                        label: l10n.home_mode_yesno,
+                        subtitle: l10n.home_mode_yesno_sub,
+                        color: AppColors.accent,
+                        filled: true,
+                        onTap: () => goTo('/yesno'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Spacer(),
+              _SavedListsCta(onTap: () => goTo('/saved')),
               const SizedBox(height: 16),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _SavedListsCta extends StatelessWidget {
+  const _SavedListsCta({required this.onTap});
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = context.isDark;
+    final bg = isDark ? AppColors.surfaceLight : AppColors.textLight;
+    final fg = isDark ? AppColors.textLight : Colors.white;
+
+    return Material(
+      color: bg,
+      borderRadius: BorderRadius.circular(14),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: onTap,
+        child: Container(
+          height: 52,
+          alignment: Alignment.center,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.bookmark_outline_rounded, size: 18, color: fg),
+              const SizedBox(width: 8),
+              Text(
+                context.l10n.home_saved_lists,
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: fg,
+                ),
+              ),
             ],
           ),
         ),

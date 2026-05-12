@@ -18,16 +18,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get home_subtitle => 'What\'s the verdict?';
 
   @override
-  String get home_mode_wheel => 'Spin the wheel';
+  String get home_mode_wheel => 'Wheel';
 
   @override
-  String get home_mode_coin => 'Flip a coin';
+  String get home_mode_wheel_sub => 'Spin to decide';
 
   @override
-  String get home_mode_list => 'Pick from a list';
+  String get home_mode_coin => 'Coin flip';
 
   @override
-  String get home_mode_yesno => 'Yes or no';
+  String get home_mode_coin_sub => 'Heads or tails';
+
+  @override
+  String get home_mode_list => 'Pick from list';
+
+  @override
+  String get home_mode_list_sub => 'Your options';
+
+  @override
+  String get home_mode_yesno => 'Yes / No';
+
+  @override
+  String get home_mode_yesno_sub => 'Just ask';
 
   @override
   String get home_saved_lists => 'Saved lists';

@@ -4,10 +4,14 @@
   "appTagline": "Stuck? Let Dilio decide.",
 
   "home_subtitle": "What's the verdict?",
-  "home_mode_wheel": "Spin the wheel",
-  "home_mode_coin": "Flip a coin",
-  "home_mode_list": "Pick from a list",
-  "home_mode_yesno": "Yes or no",
+  "home_mode_wheel": "Wheel",
+  "home_mode_wheel_sub": "Spin to decide",
+  "home_mode_coin": "Coin flip",
+  "home_mode_coin_sub": "Heads or tails",
+  "home_mode_list": "Pick from list",
+  "home_mode_list_sub": "Your options",
+  "home_mode_yesno": "Yes / No",
+  "home_mode_yesno_sub": "Just ask",
   "home_saved_lists": "Saved lists",
   "home_history": "History",
 

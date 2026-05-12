@@ -18,16 +18,28 @@ class AppLocalizationsFr extends AppLocalizations {
   String get home_subtitle => 'Quel est le verdict ?';
 
   @override
-  String get home_mode_wheel => 'Tourner la roue';
+  String get home_mode_wheel => 'Roue';
 
   @override
-  String get home_mode_coin => 'Lancer une pièce';
+  String get home_mode_wheel_sub => 'Tourne pour choisir';
 
   @override
-  String get home_mode_list => 'Choisir dans une liste';
+  String get home_mode_coin => 'Pile ou face';
 
   @override
-  String get home_mode_yesno => 'Oui ou non';
+  String get home_mode_coin_sub => 'Tire au sort';
+
+  @override
+  String get home_mode_list => 'Choisir une option';
+
+  @override
+  String get home_mode_list_sub => 'Dans ta liste';
+
+  @override
+  String get home_mode_yesno => 'Oui / Non';
+
+  @override
+  String get home_mode_yesno_sub => 'Pose la question';
 
   @override
   String get home_saved_lists => 'Listes enregistrées';

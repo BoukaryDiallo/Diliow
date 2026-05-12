@@ -119,26 +119,50 @@ abstract class AppLocalizations {
   /// No description provided for @home_mode_wheel.
   ///
   /// In en, this message translates to:
-  /// **'Spin the wheel'**
+  /// **'Wheel'**
   String get home_mode_wheel;
+
+  /// No description provided for @home_mode_wheel_sub.
+  ///
+  /// In en, this message translates to:
+  /// **'Spin to decide'**
+  String get home_mode_wheel_sub;
 
   /// No description provided for @home_mode_coin.
   ///
   /// In en, this message translates to:
-  /// **'Flip a coin'**
+  /// **'Coin flip'**
   String get home_mode_coin;
+
+  /// No description provided for @home_mode_coin_sub.
+  ///
+  /// In en, this message translates to:
+  /// **'Heads or tails'**
+  String get home_mode_coin_sub;
 
   /// No description provided for @home_mode_list.
   ///
   /// In en, this message translates to:
-  /// **'Pick from a list'**
+  /// **'Pick from list'**
   String get home_mode_list;
+
+  /// No description provided for @home_mode_list_sub.
+  ///
+  /// In en, this message translates to:
+  /// **'Your options'**
+  String get home_mode_list_sub;
 
   /// No description provided for @home_mode_yesno.
   ///
   /// In en, this message translates to:
-  /// **'Yes or no'**
+  /// **'Yes / No'**
   String get home_mode_yesno;
+
+  /// No description provided for @home_mode_yesno_sub.
+  ///
+  /// In en, this message translates to:
+  /// **'Just ask'**
+  String get home_mode_yesno_sub;
 
   /// No description provided for @home_saved_lists.
   ///

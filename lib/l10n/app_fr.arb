@@ -4,10 +4,14 @@
   "appTagline": "Bloqué ? Dilio tranche.",
 
   "home_subtitle": "Quel est le verdict ?",
-  "home_mode_wheel": "Tourner la roue",
-  "home_mode_coin": "Lancer une pièce",
-  "home_mode_list": "Choisir dans une liste",
-  "home_mode_yesno": "Oui ou non",
+  "home_mode_wheel": "Roue",
+  "home_mode_wheel_sub": "Tourne pour choisir",
+  "home_mode_coin": "Pile ou face",
+  "home_mode_coin_sub": "Tire au sort",
+  "home_mode_list": "Choisir une option",
+  "home_mode_list_sub": "Dans ta liste",
+  "home_mode_yesno": "Oui / Non",
+  "home_mode_yesno_sub": "Pose la question",
   "home_saved_lists": "Listes enregistrées",
   "home_history": "Historique",
 
