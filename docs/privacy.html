@@ -4,9 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diliow — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Diliow. We do not collect any data." />
+  <meta name="theme-color" content="#00B8A9" />
+  <link rel="icon" type="image/png" href="icon.png" />
   <style>
     :root {
       --bg: #FAFAFC;
+      --surface: #FFFFFF;
       --text: #1A1A22;
       --muted: #8E8E93;
       --brand: #00B8A9;
@@ -15,85 +19,136 @@
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0F0F14;
+        --surface: #1A1A22;
         --text: #F5F5F7;
         --muted: #8E8E93;
-        --brand: #00B8A9;
         --border: #2C2C36;
       }
     }
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 24px 96px;
-      line-height: 1.55;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    header { border-bottom: 0.5px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
-    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.5px; }
-    h2 { font-size: 19px; margin: 32px 0 12px; }
-    p, li { font-size: 16px; color: var(--text); }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+
+    .topbar {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 40px;
+    }
+    .topbar a { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .topbar img { width: 36px; height: 36px; border-radius: 9px; }
+    .topbar .name { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
+
+    header.page-header {
+      border-bottom: 0.5px solid var(--border);
+      padding-bottom: 20px; margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 32px; font-weight: 700; letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 19px; font-weight: 600;
+      margin: 32px 0 12px;
+    }
+    p, li { font-size: 16px; color: var(--text); margin-bottom: 8px; }
     .muted { color: var(--muted); font-size: 14px; }
     a { color: var(--brand); }
-    ul { padding-left: 20px; }
-    code { background: var(--border); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    ul { padding-left: 22px; }
+    code {
+      background: var(--border); padding: 2px 6px;
+      border-radius: 4px; font-size: 14px;
+    }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      margin-top: 56px; padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    footer .links { display: flex; gap: 20px; }
+    footer a {
+      color: var(--muted); text-decoration: none; font-size: 14px;
+    }
+    footer a:hover { color: var(--brand); }
+    footer .copy { color: var(--muted); font-size: 13px; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Diliow — Privacy Policy</h1>
-    <p class="muted">Last updated: 12 May 2026</p>
-  </header>
+  <main>
+    <nav class="topbar">
+      <a href="index.html">
+        <img src="icon.png" alt="Diliow" />
+        <span class="name">Diliow</span>
+      </a>
+    </nav>
 
-  <p>
-    Diliow is a decision-maker app that helps you choose between options using a wheel, a coin flip,
-    a list picker or a yes/no question. This privacy policy explains what data the app handles.
-  </p>
+    <header class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: 12 May 2026</p>
+    </header>
 
-  <h2>Data we collect</h2>
-  <p><strong>None.</strong> Diliow does not collect, transmit, or share any personal information.</p>
+    <p>
+      Diliow is a decision-maker app that helps you choose between options using a wheel, a coin flip,
+      a list picker or a yes/no question. This privacy policy explains what data the app handles.
+    </p>
 
-  <h2>Data stored on your device</h2>
-  <p>The app stores the following data <em>only on your device</em>, using a local database:</p>
-  <ul>
-    <li>Saved lists of options that you create.</li>
-    <li>The 20 most recent decisions you have made.</li>
-    <li>App preferences (onboarding state, haptic feedback toggle).</li>
-  </ul>
-  <p>
-    None of this data leaves your device. You can clear all data at any time by deleting the app
-    from your device. There is no cloud sync, no account, and no backend server.
-  </p>
+    <h2>Data we collect</h2>
+    <p><strong>None.</strong> Diliow does not collect, transmit, or share any personal information.</p>
 
-  <h2>Third parties</h2>
-  <p>Diliow does not embed any third-party advertising or analytics SDKs.</p>
-  <p>
-    The standard Google Play Console crash reporting that ships with every Android app may collect
-    anonymized crash diagnostics if the user has opted into it at the device level. That data is
-    handled by Google under their own privacy policy.
-  </p>
+    <h2>Data stored on your device</h2>
+    <p>The app stores the following data <em>only on your device</em>, using a local database:</p>
+    <ul>
+      <li>Saved lists of options that you create.</li>
+      <li>The 20 most recent decisions you have made.</li>
+      <li>App preferences (onboarding state, haptic feedback toggle).</li>
+    </ul>
+    <p>
+      None of this data leaves your device. You can clear all data at any time by deleting the app
+      from your device. There is no cloud sync, no account, and no backend server.
+    </p>
 
-  <h2>Permissions</h2>
-  <p>Diliow uses the following Android permissions:</p>
-  <ul>
-    <li><code>VIBRATE</code> — to provide haptic feedback when you spin the wheel, flip the coin or reveal a result.</li>
-  </ul>
+    <h2>Third parties</h2>
+    <p>Diliow does not embed any third-party advertising or analytics SDKs.</p>
+    <p>
+      The standard Google Play Console crash reporting that ships with every Android app may collect
+      anonymized crash diagnostics if the user has opted into it at the device level. That data is
+      handled by Google under their own privacy policy.
+    </p>
 
-  <h2>Children</h2>
-  <p>Diliow is appropriate for users aged 13 and over.</p>
+    <h2>Permissions</h2>
+    <p>Diliow uses the following Android permissions:</p>
+    <ul>
+      <li><code>VIBRATE</code> — to provide haptic feedback when you spin the wheel, flip the coin or reveal a result.</li>
+    </ul>
 
-  <h2>Changes to this policy</h2>
-  <p>
-    If we ever update this policy, we will publish the new version at this URL with an updated
-    "Last updated" date.
-  </p>
+    <h2>Children</h2>
+    <p>Diliow is appropriate for users aged 13 and over.</p>
 
-  <h2>Contact</h2>
-  <p>
-    For any question about this policy, you can reach the developer at
-    <a href="mailto:d-boukary@proton.me">d-boukary@proton.me</a>.
-  </p>
+    <h2>Changes to this policy</h2>
+    <p>
+      If we ever update this policy, we will publish the new version at this URL with an updated
+      "Last updated" date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For any question about this policy, you can reach the developer at
+      <a href="mailto:d-boukary@proton.me">d-boukary@proton.me</a>.
+    </p>
+
+    <footer>
+      <div class="copy">© 2026 Diliow</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:d-boukary@proton.me">Contact</a>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

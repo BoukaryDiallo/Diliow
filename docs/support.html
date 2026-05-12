@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diliow — Support</title>
+  <meta name="description" content="Help and FAQ for Diliow, the decision-maker app." />
+  <meta name="theme-color" content="#00B8A9" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <style>
+    :root {
+      --bg: #FAFAFC;
+      --surface: #FFFFFF;
+      --text: #1A1A22;
+      --muted: #8E8E93;
+      --brand: #00B8A9;
+      --border: #E5E5EA;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0F0F14;
+        --surface: #1A1A22;
+        --text: #F5F5F7;
+        --muted: #8E8E93;
+        --border: #2C2C36;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+
+    .topbar {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 40px;
+    }
+    .topbar a { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .topbar img { width: 36px; height: 36px; border-radius: 9px; }
+    .topbar .name { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
+
+    h1 {
+      font-size: 32px; font-weight: 700; letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .subtitle { color: var(--muted); font-size: 16px; margin-bottom: 40px; }
+
+    h2 {
+      font-size: 20px; font-weight: 600;
+      margin: 40px 0 16px;
+    }
+
+    details {
+      background: var(--surface); border: 0.5px solid var(--border);
+      border-radius: 14px; padding: 16px 20px; margin-bottom: 10px;
+      cursor: pointer;
+    }
+    details[open] { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04); }
+    summary {
+      font-weight: 600; font-size: 15px; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+"; color: var(--brand); font-size: 22px; font-weight: 400;
+      transition: transform 0.2s ease;
+    }
+    details[open] summary::after { content: "−"; }
+    details p {
+      margin-top: 12px; color: var(--text); font-size: 14px; line-height: 1.6;
+    }
+    details p + p { margin-top: 8px; }
+    details code {
+      background: var(--border); padding: 1px 6px; border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .contact-card {
+      background: var(--surface); border: 0.5px solid var(--border);
+      border-radius: 16px; padding: 24px; margin-top: 24px;
+    }
+    .contact-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+    .contact-card p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    .contact-card a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; background: var(--brand); color: white;
+      border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 500;
+    }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      margin-top: 64px; padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    footer .links { display: flex; gap: 20px; }
+    footer a {
+      color: var(--muted); text-decoration: none; font-size: 14px;
+    }
+    footer a:hover { color: var(--brand); }
+    footer .copy { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="topbar">
+      <a href="index.html">
+        <img src="icon.png" alt="Diliow" />
+        <span class="name">Diliow</span>
+      </a>
+    </nav>
+
+    <h1>Support</h1>
+    <p class="subtitle">Common questions about Diliow, and how to reach us if you need more help.</p>
+
+    <h2>Frequently asked</h2>
+
+    <details>
+      <summary>How does the wheel choose a winner?</summary>
+      <p>
+        Each spin uses a uniform random number generator: every segment has exactly
+        the same probability of landing under the pointer, regardless of size.
+      </p>
+    </details>
+
+    <details>
+      <summary>How is the Yes / No mode weighted?</summary>
+      <p>
+        Yes / No is intentionally not a flat 50/50. We use roughly 45% Yes,
+        45% No, and 10% Maybe to add a little unpredictability, because
+        "maybe" is often the most honest answer to a real-life question.
+      </p>
+    </details>
+
+    <details>
+      <summary>Where is my data stored?</summary>
+      <p>
+        Entirely on your device, in a local database (Hive). Diliow does
+        <strong>not</strong> have a server, an account system, or cloud sync.
+      </p>
+      <p>
+        Removing the app deletes all of your saved lists, history and settings.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I sync my saved lists across devices?</summary>
+      <p>
+        Not yet. Diliow is offline-first by design. We may add an optional
+        cross-device sync in a future major release, but it will always
+        remain opt-in.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I clear my decision history?</summary>
+      <p>
+        Open the <strong>History</strong> screen from the top-right icon on
+        the home page, then tap the <strong>trash</strong> icon and confirm.
+      </p>
+    </details>
+
+    <details>
+      <summary>How many options can I add to the wheel or a list?</summary>
+      <p>
+        The wheel supports 2 to 12 segments. Saved lists and the list picker
+        have no hard limit on the number of options.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I turn off haptic feedback?</summary>
+      <p>
+        Yes, a setting will be available in an upcoming update. For now,
+        Android's system-wide vibration toggle disables it.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does Diliow show ads?</summary>
+      <p>
+        No. Diliow is 100% free with no advertising and no in-app purchases.
+      </p>
+    </details>
+
+    <details>
+      <summary>What languages are supported?</summary>
+      <p>
+        English and French. The app picks your device language automatically;
+        if neither is available, it falls back to English.
+      </p>
+    </details>
+
+    <h2>Get in touch</h2>
+    <div class="contact-card">
+      <h3>Still need help?</h3>
+      <p>Send us an email and we'll get back to you within a few days.</p>
+      <a href="mailto:d-boukary@proton.me?subject=Diliow%20support">
+        ✉ Email support
+      </a>
+    </div>
+
+    <footer>
+      <div class="copy">© 2026 Diliow</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:d-boukary@proton.me">Contact</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
