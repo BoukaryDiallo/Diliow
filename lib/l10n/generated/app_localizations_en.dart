@@ -9,10 +9,10 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appName => 'Dilio';
+  String get appName => 'Diliow';
 
   @override
-  String get appTagline => 'Stuck? Let Dilio decide.';
+  String get appTagline => 'Stuck? Let Diliow decide.';
 
   @override
   String get home_subtitle => 'What\'s the verdict?';
@@ -169,7 +169,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get history_replay => 'Replay';
 
   @override
-  String get onboarding_welcome_title => 'Stuck? Let Dilio decide.';
+  String get onboarding_welcome_title => 'Stuck? Let Diliow decide.';
 
   @override
   String get onboarding_welcome_body =>
@@ -180,7 +180,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboarding_how_body =>
-      'Wheel, coin, list picker, or yes/no — choose your method and let Dilio do the rest.';
+      'Wheel, coin, list picker, or yes/no — choose your method and let Diliow do the rest.';
 
   @override
   String get onboarding_cta_next => 'Next';
@@ -190,7 +190,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String share_result_template(String result) {
-    return 'Dilio chose: $result';
+    return 'Diliow chose: $result';
   }
 
   @override

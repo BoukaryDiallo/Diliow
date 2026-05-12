@@ -3,8 +3,8 @@
 // Check in to version control
 
 import 'package:hive_ce/hive.dart';
-import 'package:dilio/features/history/domain/decision_record.dart';
-import 'package:dilio/features/saved_lists/domain/saved_list.dart';
+import 'package:diliow/features/history/domain/decision_record.dart';
+import 'package:diliow/features/saved_lists/domain/saved_list.dart';
 
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {

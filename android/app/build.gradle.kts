@@ -15,7 +15,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.boukarydiallo.dilio"
+    namespace = "com.boukarydiallo.diliow"
     compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
@@ -29,8 +29,8 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.boukarydiallo.dilio"
-        minSdk = 23
+        applicationId = "com.boukarydiallo.diliow"
+        minSdk = flutter.minSdkVersion
         targetSdk = 35
         versionCode = flutter.versionCode
         versionName = flutter.versionName

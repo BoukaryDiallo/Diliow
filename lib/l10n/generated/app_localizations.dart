@@ -101,13 +101,13 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'Dilio'**
+  /// **'Diliow'**
   String get appName;
 
   /// No description provided for @appTagline.
   ///
   /// In en, this message translates to:
-  /// **'Stuck? Let Dilio decide.'**
+  /// **'Stuck? Let Diliow decide.'**
   String get appTagline;
 
   /// No description provided for @home_subtitle.
@@ -401,7 +401,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboarding_welcome_title.
   ///
   /// In en, this message translates to:
-  /// **'Stuck? Let Dilio decide.'**
+  /// **'Stuck? Let Diliow decide.'**
   String get onboarding_welcome_title;
 
   /// No description provided for @onboarding_welcome_body.
@@ -419,7 +419,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboarding_how_body.
   ///
   /// In en, this message translates to:
-  /// **'Wheel, coin, list picker, or yes/no — choose your method and let Dilio do the rest.'**
+  /// **'Wheel, coin, list picker, or yes/no — choose your method and let Diliow do the rest.'**
   String get onboarding_how_body;
 
   /// No description provided for @onboarding_cta_next.
@@ -437,7 +437,7 @@ abstract class AppLocalizations {
   /// No description provided for @share_result_template.
   ///
   /// In en, this message translates to:
-  /// **'Dilio chose: {result}'**
+  /// **'Diliow chose: {result}'**
   String share_result_template(String result);
 
   /// No description provided for @common_cancel.

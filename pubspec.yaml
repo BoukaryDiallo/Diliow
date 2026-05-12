@@ -1,5 +1,5 @@
-name: dilio
-description: "Dilio — Spin a wheel, flip a coin, pick from a list, or ask yes/no."
+name: diliow
+description: "Diliow — Spin a wheel, flip a coin, pick from a list, or ask yes/no."
 publish_to: 'none'
 version: 1.0.0+1
 

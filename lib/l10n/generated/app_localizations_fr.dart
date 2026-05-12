@@ -9,10 +9,10 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appName => 'Dilio';
+  String get appName => 'Diliow';
 
   @override
-  String get appTagline => 'Bloqué ? Dilio tranche.';
+  String get appTagline => 'Bloqué ? Diliow tranche.';
 
   @override
   String get home_subtitle => 'Quel est le verdict ?';
@@ -169,7 +169,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get history_replay => 'Rejouer';
 
   @override
-  String get onboarding_welcome_title => 'Bloqué ? Dilio tranche.';
+  String get onboarding_welcome_title => 'Bloqué ? Diliow tranche.';
 
   @override
   String get onboarding_welcome_body =>
@@ -180,7 +180,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get onboarding_how_body =>
-      'Roue, pièce, liste ou oui/non — choisis ta méthode, Dilio s\'occupe du reste.';
+      'Roue, pièce, liste ou oui/non — choisis ta méthode, Diliow s\'occupe du reste.';
 
   @override
   String get onboarding_cta_next => 'Suivant';
@@ -190,7 +190,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String share_result_template(String result) {
-    return 'Dilio a choisi : $result';
+    return 'Diliow a choisi : $result';
   }
 
   @override

@@ -9,11 +9,11 @@ locally before building.
 ### Generate an upload keystore (one-off)
 
 ```bash
-keytool -genkey -v -keystore ~/dilio-upload.keystore \
-  -alias dilio -keyalg RSA -keysize 2048 -validity 10000
+keytool -genkey -v -keystore ~/diliow-upload.keystore \
+  -alias diliow -keyalg RSA -keysize 2048 -validity 10000
 ```
 
-Back up `~/dilio-upload.keystore` somewhere safe — if you lose it, you cannot
+Back up `~/diliow-upload.keystore` somewhere safe — if you lose it, you cannot
 update the app on Play Store ever again.
 
 ### Configure `android/key.properties`
@@ -23,8 +23,8 @@ Copy `android/key.properties.example` to `android/key.properties` and fill in:
 ```
 storePassword=<the password you chose>
 keyPassword=<the password you chose>
-keyAlias=dilio
-storeFile=/absolute/path/to/dilio-upload.keystore
+keyAlias=diliow
+storeFile=/absolute/path/to/diliow-upload.keystore
 ```
 
 ## 2. Build the AAB
@@ -41,7 +41,7 @@ release testing.
 
 ## 3. Play Console submission checklist
 
-- [ ] App title per locale: `Dilio — What to Do` (en), `Dilio: QueFaire` (fr)
+- [ ] App title per locale: `Diliow — What to Do` (en), `Diliow: QueFaire` (fr)
 - [ ] Short description (80 char) per locale
 - [ ] Full description (4000 char) per locale
 - [ ] 2+ phone screenshots per locale (real in-app content, no placeholders)

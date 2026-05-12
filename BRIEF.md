@@ -1,4 +1,4 @@
-# Dilio — QueFaire
+# Diliow — QueFaire
 
 > **Decision-maker mobile app** — Spin a wheel, flip a coin, pick from a list, or ask yes/no. Built with Flutter for Android (Play Store), with iOS roadmap.
 
@@ -10,10 +10,10 @@ This README is the **single source of truth** for the project. An autonomous cod
 
 | Item | Value |
 |---|---|
-| **App name (brand)** | Dilio |
-| **Play Store title (EN)** | `Dilio — What to Do` |
-| **Play Store title (FR)** | `Dilio: QueFaire` |
-| **Package name** | `com.boukarydiallo.dilio` |
+| **App name (brand)** | Diliow |
+| **Play Store title (EN)** | `Diliow — What to Do` |
+| **Play Store title (FR)** | `Diliow: QueFaire` |
+| **Package name** | `com.boukarydiallo.diliow` |
 | **Min SDK** | 23 (Android 6.0) |
 | **Target SDK** | 35 (Android 15) |
 | **Flutter channel** | stable, ≥ 3.24 |
@@ -246,7 +246,7 @@ lib/
 
 ### 4.7 Onboarding (first launch only)
 - 2 screens with `PageView`:
-  1. **Welcome**: logo, tagline "Stuck? Let Dilio decide.", "Get started" button.
+  1. **Welcome**: logo, tagline "Stuck? Let Diliow decide.", "Get started" button.
   2. **How it works**: visual showing the 4 modes, "Let's go" button → marks `onboarding_complete` in settings box and routes to `/`.
 
 ---
@@ -372,7 +372,7 @@ Use multiples of 4: `4, 8, 12, 16, 20, 24, 32, 48`. Default screen padding: `20p
 ### 6.6 Voice & tone
 | Context | English | French |
 |---|---|---|
-| Tagline | Stuck? Let Dilio decide. | Bloqué ? Dilio tranche. |
+| Tagline | Stuck? Let Diliow decide. | Bloqué ? Diliow tranche. |
 | Empty home subtitle | What's the verdict? | Quel est le verdict ? |
 | Result reveal | The verdict is in ✨ | Verdict ! ✨ |
 | Yes / No prompt | What's on your mind? | Quelle est la question ? |
@@ -405,7 +405,7 @@ Both ARB files (`app_en.arb`, `app_fr.arb`) must have identical keys. Sample key
 - `saved_lists_title`, `saved_lists_empty`, `saved_list_delete_confirm`
 - `history_title`, `history_empty`, `history_clear_all`, `history_clear_confirm`
 - `onboarding_welcome_title`, `onboarding_welcome_body`, `onboarding_cta_next`, `onboarding_cta_start`
-- `share_result_template` ("Dilio chose: {result}")
+- `share_result_template` ("Diliow chose: {result}")
 
 ---
 
@@ -494,7 +494,7 @@ Output: `build/app/outputs/bundle/release/app-release.aab`
 ### 11.3 Signing
 Generate upload keystore once:
 ```bash
-keytool -genkey -v -keystore ~/dilio-upload.keystore -alias dilio \
+keytool -genkey -v -keystore ~/diliow-upload.keystore -alias diliow \
   -keyalg RSA -keysize 2048 -validity 10000
 ```
 
@@ -502,14 +502,14 @@ keytool -genkey -v -keystore ~/dilio-upload.keystore -alias dilio \
 ```
 storePassword=...
 keyPassword=...
-keyAlias=dilio
-storeFile=/Users/.../dilio-upload.keystore
+keyAlias=diliow
+storeFile=/Users/.../diliow-upload.keystore
 ```
 
 Wire into `android/app/build.gradle` per Flutter docs.
 
 ### 11.4 Play Console checklist
-- [ ] App name (per locale): `Dilio — What to Do` (en), `Dilio: QueFaire` (fr)
+- [ ] App name (per locale): `Diliow — What to Do` (en), `Diliow: QueFaire` (fr)
 - [ ] Short description (80 char) per locale
 - [ ] Full description (4000 char) per locale
 - [ ] 2 screenshots min per device type (phone, 7" tablet, 10" tablet) per locale — **use the in-app screens with real content, not Lorem Ipsum**
@@ -544,7 +544,7 @@ Wire into `android/app/build.gradle` per Flutter docs.
 
 | Day | Deliverable |
 |---|---|
-| **D1** | `flutter create dilio`, full `pubspec.yaml`, theme system (colors, typography, app_theme), `main.dart` with `ProviderScope` + Hive init, router skeleton, l10n setup, empty screens for all 7 routes. |
+| **D1** | `flutter create diliow`, full `pubspec.yaml`, theme system (colors, typography, app_theme), `main.dart` with `ProviderScope` + Hive init, router skeleton, l10n setup, empty screens for all 7 routes. |
 | **D2** | Home screen with 4 mode cards (matches mockup), onboarding (2 pages), navigation working end-to-end, History screen with mock data. |
 | **D3** | Wheel mode (CustomPainter + animation + segment editor), Coin flip (3D animation), wire to history repository. |
 | **D4** | List picker mode + saved lists (Hive integration), Yes/No mode, result share, haptics service, settings persistence. |

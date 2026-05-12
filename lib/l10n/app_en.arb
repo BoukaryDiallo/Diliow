@@ -1,7 +1,7 @@
 {
   "@@locale": "en",
-  "appName": "Dilio",
-  "appTagline": "Stuck? Let Dilio decide.",
+  "appName": "Diliow",
+  "appTagline": "Stuck? Let Diliow decide.",
 
   "home_subtitle": "What's the verdict?",
   "home_mode_wheel": "Wheel",
@@ -64,14 +64,14 @@
   "history_share": "Share",
   "history_replay": "Replay",
 
-  "onboarding_welcome_title": "Stuck? Let Dilio decide.",
+  "onboarding_welcome_title": "Stuck? Let Diliow decide.",
   "onboarding_welcome_body": "Spin a wheel, flip a coin, pick from a list, or ask yes or no.",
   "onboarding_how_title": "Four ways to decide",
-  "onboarding_how_body": "Wheel, coin, list picker, or yes/no — choose your method and let Dilio do the rest.",
+  "onboarding_how_body": "Wheel, coin, list picker, or yes/no — choose your method and let Diliow do the rest.",
   "onboarding_cta_next": "Next",
   "onboarding_cta_start": "Let's go",
 
-  "share_result_template": "Dilio chose: {result}",
+  "share_result_template": "Diliow chose: {result}",
   "@share_result_template": {
     "placeholders": { "result": { "type": "String" } }
   },

@@ -1,7 +1,7 @@
 {
   "@@locale": "fr",
-  "appName": "Dilio",
-  "appTagline": "Bloqué ? Dilio tranche.",
+  "appName": "Diliow",
+  "appTagline": "Bloqué ? Diliow tranche.",
 
   "home_subtitle": "Quel est le verdict ?",
   "home_mode_wheel": "Roue",
@@ -64,14 +64,14 @@
   "history_share": "Partager",
   "history_replay": "Rejouer",
 
-  "onboarding_welcome_title": "Bloqué ? Dilio tranche.",
+  "onboarding_welcome_title": "Bloqué ? Diliow tranche.",
   "onboarding_welcome_body": "Tourne une roue, lance une pièce, choisis dans une liste ou pose une question oui/non.",
   "onboarding_how_title": "Quatre façons de décider",
-  "onboarding_how_body": "Roue, pièce, liste ou oui/non — choisis ta méthode, Dilio s'occupe du reste.",
+  "onboarding_how_body": "Roue, pièce, liste ou oui/non — choisis ta méthode, Diliow s'occupe du reste.",
   "onboarding_cta_next": "Suivant",
   "onboarding_cta_start": "C'est parti",
 
-  "share_result_template": "Dilio a choisi : {result}",
+  "share_result_template": "Diliow a choisi : {result}",
   "@share_result_template": {
     "placeholders": { "result": { "type": "String" } }
   },
